@@ -8,22 +8,26 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface VisualizedEntityRepository extends JpaRepository<VisualizationEntity, Long> {
 
-	public List<VisualizationEntity> findByYearEndYear(int endYear);
+    List<VisualizationEntity> findByEndYear(int endYear);
 
-	public List<VisualizationEntity> findByTopics(String topics);
+    List<VisualizationEntity> findByTopics(String topics);
 
-	public List<VisualizationEntity> findBySector(String sector);
+    List<VisualizationEntity> findBySector(String sector);
 
-	public List<VisualizationEntity> findByRegion(String region);
+    List<VisualizationEntity> findByRegion(String region);
 
-	public List<VisualizationEntity> findByPestle(String pestle);
+    List<VisualizationEntity> findByPestle(String pestle);
 
-	public List<VisualizationEntity> findBySource(String source);
+    List<VisualizationEntity> findBySource(String source);
 
-	public List<VisualizationEntity> findBySwot(String swot);
+    List<VisualizationEntity> findBySwot(String swot);
 
-	public List<VisualizationEntity> findByCountry(String country);
+    List<VisualizationEntity> findByCountry(String country);
 
-	public List<VisualizationEntity> findByCity(String city);
+    List<VisualizationEntity> findByCity(String city);
+
+    List<VisualizationEntity> findByEndYearAndSectorAndRegionAndPestleAndSourceAndSwotAndCountryAndCity(
+            int endYear, String sector, String region, String pestle, String source, String swot, String country,
+            String city);
 
 }

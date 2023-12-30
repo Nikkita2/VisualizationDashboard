@@ -1,29 +1,29 @@
 package com.Visualization.Dashboard;
 
 public class VisualizationEntityVO {
-	 private Long id;
-	 private int intensity;
-	 private int likelihood;
-	 private int relevance;
-	 private int year;
-	 private String country;
-	 private String topics;
-	 private String region;
-	 private String city;
-	 private String swot;
-	 private int endYear;
-	 private String sector;
-	 private float cityLng;
-	 private float cityLat;
-	 private String insight;
-	 private String url;
-	 private int startYear;
-	 private int impact;
-	 private String added;
-	 private String published;
-	 private String pestle;
-	 private String source;
-	 private String title;
+    private Long id;
+    private int intensity;
+    private int likelihood;
+    private int relevance;
+    private int year;
+    private String country;
+    private String topics;
+    private String region;
+    private String city;
+    private String swot;
+    private int endYear;
+    private String sector;
+    private float cityLng; 
+    private float cityLat; 
+    private String insight;
+    private String url;
+    private int startYear;
+    private int impact;
+    private String added;
+    private String published;
+    private String pestle;
+    private String source;
+    private String title;
 	public Long getId() {
 		return id;
 	}
@@ -96,13 +96,13 @@ public class VisualizationEntityVO {
 	public void setSector(String sector) {
 		this.sector = sector;
 	}
-	public double getCityLng() {
+	public float getCityLng() {
 		return cityLng;
 	}
 	public void setCityLng(float cityLng) {
 		this.cityLng = cityLng;
 	}
-	public double getCityLat() {
+	public float getCityLat() {
 		return cityLat;
 	}
 	public void setCityLat(float cityLat) {
@@ -162,5 +162,5 @@ public class VisualizationEntityVO {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	 
+    
 }
