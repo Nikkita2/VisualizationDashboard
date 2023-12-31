@@ -20,11 +20,11 @@ public class VisualizationController {
 			@RequestParam(required = false) String sector, @RequestParam(required = false) String region,
 			@RequestParam(required = false) String pestle, @RequestParam(required = false) String source,
 			@RequestParam(required = false) String swot, @RequestParam(required = false) String country,
-			@RequestParam(required = false) String city) {
+			@RequestParam(required = false) String city, String topics) {
 		BaseResponse response = new BaseResponse();
 		try {
 
-			response = vService.getAllDetails(endYear, sector, region, pestle, source, swot, country, city);
+			response = vService.getAllDetails(endYear, sector, region, pestle, source, swot, country, city, topics);
 
 			response.setResponseCode(IVisualizationConstants.successCode);
 			response.setResponseMessage(IVisualizationConstants.successMessage);
@@ -39,4 +39,5 @@ public class VisualizationController {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
 		}
 	}
+	
 }

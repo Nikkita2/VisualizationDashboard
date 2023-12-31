@@ -14,12 +14,12 @@ public class VisualizationServiceImpl implements VisualizationService {
 
 	@Override
 	public BaseResponse getAllDetails(int endYear, String sector, String region, String pestle, String source,
-			String swot, String country, String city) {
+			String swot, String country, String city, String topics) {
 		BaseResponse response = new BaseResponse();
 		try {
 			List<VisualizationEntity> filteredEntities = visualizationRepo
-					.findByEndYearAndSectorAndRegionAndPestleAndSourceAndSwotAndCountryAndCity(endYear, sector, region,
-							pestle, source, swot, country, city);
+					.findByEndYearAndSectorAndRegionAndPestleAndSourceAndSwotAndCountryAndCityAndTopics(endYear, sector, region,
+							pestle, source, swot, country, city, topics);
 
 			List<VisualizationEntityVO> visualizationVo = new ArrayList<>();
 			for (VisualizationEntity entity : filteredEntities) {
